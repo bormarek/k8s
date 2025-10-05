@@ -1,0 +1,29 @@
+# k8s/10-configmap-index.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-index
+  namespace: nginx-demo
+data:
+  index.html: |
+    <!doctype html>
+    <html lang="pl">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>Witaj u Marka</title>
+      <style>
+        body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell; 
+               margin: 0; display: grid; place-items: center; min-height: 100vh; }
+        .card { padding: 2rem 3rem; border: 1px solid #e5e7eb; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+        h1 { margin: 0 0 .5rem 0; }
+        p { margin: 0; color: #374151; }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <h1>Witaj na stronie Marka! 🚀</h1>
+        <p>Serwowana przez Nginx w Kubernetes.</p>
+      </div>
+    </body>
+    </html>
